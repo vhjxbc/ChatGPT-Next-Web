@@ -139,11 +139,10 @@ export function SideBar(props: { className?: string }) {
       const now = new Date();
       const newYear2025 = new Date(2025, 0, 28);
       const daysUntilNewYear2025 = Math.ceil(
-        (newYear2025 - now) / (1000 * 60 * 60 * 24),
+        (newYear2025.getTime() - now.getTime()) / (1000 * 60 * 60 * 24),
       );
       setSubTitle(`距离2025年新年还有${daysUntilNewYear2025}天`);
     };
-
     updateSubTitle();
     const interval = setInterval(updateSubTitle, 60000); // Update every minute
 
@@ -153,7 +152,9 @@ export function SideBar(props: { className?: string }) {
   const handleMouseEnter = () => {
     const now = new Date();
     const startDate = new Date(2023, 0, 1);
-    const daysSinceStart = Math.ceil((now - startDate) / (1000 * 60 * 60 * 24));
+    const daysSinceStart = Math.ceil(
+      (now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
+    );
     setSubTitle(`❤️和zwp恋爱已经${daysSinceStart}天❤️`);
   };
 
@@ -161,7 +162,7 @@ export function SideBar(props: { className?: string }) {
     const now = new Date();
     const newYear2025 = new Date(2025, 0, 28);
     const daysUntilNewYear2025 = Math.ceil(
-      (newYear2025 - now) / (1000 * 60 * 60 * 24),
+      (newYear2025.getTime() - now.getTime()) / (1000 * 60 * 60 * 24),
     );
     setSubTitle(`距离2025年新年还有${daysUntilNewYear2025}天`);
   };
