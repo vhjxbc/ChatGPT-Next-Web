@@ -1,3 +1,10 @@
+/*
+ * @Author: zhangjiabao
+ * @Date: 2024-07-16 09:53:24
+ * @LastEditors: zhangjiabao
+ * @LastEditTime: 2024-07-16 10:02:49
+ * @FilePath: /ChatGPT-Next-Web/app/layout.tsx
+ */
 /* eslint-disable @next/next/no-page-custom-font */
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
@@ -10,10 +17,10 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
-  title: "NextChat",
+  title: "503AI-Chat",
   description: "Your personal ChatGPT Chat Bot.",
   appleWebApp: {
-    title: "NextChat",
+    title: "503AI-Chat",
     statusBarStyle: "default",
   },
 };
@@ -37,7 +44,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="config" content={JSON.stringify(getClientConfig())} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
