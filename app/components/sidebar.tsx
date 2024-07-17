@@ -187,9 +187,9 @@ export function SideBar(props: { className?: string }) {
         >
           {subTitle}
         </div>
-        <div className={styles["sidebar-logo"] + " no-dark"}>
+        {/* <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
-        </div>
+        </div> */}
       </div>
 
       <div
