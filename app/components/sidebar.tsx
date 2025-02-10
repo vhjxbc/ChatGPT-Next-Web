@@ -160,11 +160,11 @@ export function SideBar(props: { className?: string }) {
 
   const handleMouseLeave = () => {
     const now = new Date();
-    const newYear2025 = new Date(2025, 0, 28);
+    const newYear2025 = new Date(2026, 0, 16);
     const daysUntilNewYear2025 = Math.ceil(
       (newYear2025.getTime() - now.getTime()) / (1000 * 60 * 60 * 24),
     );
-    setSubTitle(`距离2025年新年还有${daysUntilNewYear2025}天`);
+    setSubTitle(`距离2026年新年还有${daysUntilNewYear2025}天`);
   };
 
   return (
